@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (navbar) navbar.classList.toggle('mobile-open');
         });
 
-        // Close menu when clicking link
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('active');
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
                 mobileMenu.classList.remove('active');
@@ -40,12 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 3. Smooth Scrolling & 9. Navbar Link Active State on Click
+    // 3. Smooth Scrolling & Nav Active State
     const navLinks = document.querySelectorAll('a[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Add active class on click
             document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
             if (this.classList.contains('nav-link')) {
                 this.classList.add('active');
@@ -69,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 4. Active Nav Link Highlighting via IntersectionObserver
+    // 4. Active Nav Link Highlighting
     const sections = document.querySelectorAll('section[id]');
     
     if (sections.length > 0) {
@@ -93,13 +90,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const revealElements = document.querySelectorAll('[data-reveal]');
     
     if (revealElements.length > 0) {
-        // Group elements by parent to apply staggered delays
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
-                    
-                    // Add staggered delay for siblings if they share the same parent
                     const parent = el.parentElement;
                     const siblings = Array.from(parent.querySelectorAll('[data-reveal]'));
                     const index = siblings.indexOf(el);
@@ -125,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typingTimeout;
 
         function typeEffect() {
             const currentRole = roles[roleIndex];
@@ -141,15 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
             let typeSpeed = isDeleting ? 40 : 60;
 
             if (!isDeleting && charIndex === currentRole.length) {
-                typeSpeed = 2000; // Pause after typing complete
+                typeSpeed = 2000;
                 isDeleting = true;
             } else if (isDeleting && charIndex === 0) {
                 isDeleting = false;
                 roleIndex = (roleIndex + 1) % roles.length;
-                typeSpeed = 500; // Pause before next role
+                typeSpeed = 500;
             }
 
-            typingTimeout = setTimeout(typeEffect, typeSpeed);
+            setTimeout(typeEffect, typeSpeed);
         }
 
         typeEffect();
@@ -157,10 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 7. Stats Counter Animation
     const statNumbers = document.querySelectorAll('.stat-number[data-count]');
-    const statsSection = document.querySelector('.about-stats'); // Assuming this section wraps the stats
+    const statsSection = document.querySelector('.about-stats');
 
     if (statNumbers.length > 0 && statsSection) {
-        // easeOutQuad function
         const easeOutQuad = t => t * (2 - t);
 
         const animateCount = (el) => {
@@ -180,7 +172,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (progress < duration) {
                     window.requestAnimationFrame(step);
                 } else {
-                    el.textContent = target; // Ensure it ends exactly on the target
+                    el.textContent = target;
                 }
             };
             
@@ -199,7 +191,10 @@ document.addEventListener("DOMContentLoaded", () => {
         statsObserver.observe(statsSection);
     }
 
-    // 8. Contact Form Handling
+    // 8. Contact Form — Direct Telegram Integration
+    const TELEGRAM_BOT_TOKEN = '8901315393:AAGEq9kyw6CEOQWoE3IWP0B5Ud7pOUeo0K4';
+    const TELEGRAM_CHAT_ID = '1414327005';
+
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
 
@@ -208,49 +203,49 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn ? submitBtn.textContent : 'Submit';
+            const btnSpan = submitBtn ? submitBtn.querySelector('span') : null;
+            const originalText = btnSpan ? btnSpan.textContent : 'Send Message';
             
-            if (submitBtn) {
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-            }
+            if (btnSpan) btnSpan.textContent = 'Sending...';
+            if (submitBtn) submitBtn.disabled = true;
 
             const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                message: formData.get('message')
-            };
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+
+            const telegramText = `📩 New Portfolio Message!\n\n👤 Name: ${name}\n📧 Email: ${email}\n\n💬 Message:\n${message}\n\n🕐 ${new Date().toLocaleString()}`;
 
             try {
-                const response = await fetch('/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
+                const response = await fetch(
+                    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            chat_id: TELEGRAM_CHAT_ID,
+                            text: telegramText,
+                        }),
+                    }
+                );
 
                 if (response.ok) {
                     contactForm.style.display = 'none';
                     if (formSuccess) formSuccess.classList.add('active');
                     contactForm.reset();
 
-                    // Reset form after 4 seconds
                     setTimeout(() => {
                         if (formSuccess) formSuccess.classList.remove('active');
-                        contactForm.style.display = 'block';
+                        contactForm.style.display = 'flex';
                     }, 4000);
                 } else {
                     throw new Error('Failed to send message.');
                 }
             } catch (error) {
-                alert(error.message || 'An error occurred while sending the message.');
+                alert('An error occurred. Please try again or contact me directly via email.');
             } finally {
-                if (submitBtn) {
-                    submitBtn.textContent = originalBtnText;
-                    submitBtn.disabled = false;
-                }
+                if (btnSpan) btnSpan.textContent = originalText;
+                if (submitBtn) submitBtn.disabled = false;
             }
         });
     }
