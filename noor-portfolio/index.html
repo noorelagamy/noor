@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noor Karam El-agamy | Data Analyst | AI Specialist | Finance</title>
+  <meta name="description" content="Professional portfolio of Noor Karam El-agamy — Data Analyst, AI Specialist, and Finance professional building intelligent, data-driven solutions." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN with Custom Dark Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#08090D',
+              surface: '#0F121B',
+              card: '#141824',
+              border: 'rgba(255, 255, 255, 0.08)',
+              accent: '#38BDF8',
+              cyan: '#2DD4BF',
+              purple: '#818CF8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-[#08090D] text-slate-100 antialiased selection:bg-sky-500/30 selection:text-sky-200 min-h-screen relative overflow-x-hidden">
+
+  <!-- ======================================================== -->
+  <!-- CINEMATIC INTRO OVERLAY                                  -->
+  <!-- ======================================================== -->
+  <div id="introOverlay">
+    <!-- Ambient Radial Glow Behind Centerpiece -->
+    <div class="absolute w-[450px] h-[450px] rounded-full bg-gradient-to-tr from-sky-600/20 via-indigo-600/10 to-transparent blur-3xl pointer-events-none"></div>
+
+    <!-- Step 1: Centered Name -->
+    <div id="introName" class="intro-name-step text-center px-6 relative z-10">
+      <p class="text-xs md:text-sm tracking-[0.3em] uppercase text-sky-400 font-mono mb-3">Portfolio</p>
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white font-heading">
+        Noor Karam <span class="text-gradient-accent">El-agamy</span>
+      </h1>
+      <p class="text-slate-400 text-sm md:text-base tracking-widest uppercase mt-4 font-light">
+        Data Analyst • AI Specialist • Finance
+      </p>
+    </div>
+
+    <!-- Step 2: Centered Transparent Portrait -->
+    <div id="introPhoto" class="intro-photo-step absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+      <div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center">
+        <!-- Soft Circular Backlight Glow -->
+        <div class="absolute inset-0 rounded-full bg-gradient-to-b from-sky-500/20 via-indigo-500/10 to-transparent blur-2xl"></div>
+        <img src="assets/images/profile-transparent.png" alt="Noor Karam El-agamy" class="max-h-full max-w-full object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)] relative z-10" />
+      </div>
+      <p class="text-slate-300 text-sm tracking-widest uppercase font-mono mt-4 opacity-80">Welcome</p>
+    </div>
+
+    <!-- Skip Intro Button -->
+    <button id="skipIntroBtn" class="absolute bottom-8 right-8 text-xs font-mono text-slate-400 hover:text-white px-4 py-2 rounded-full border border-white/10 hover:border-white/30 backdrop-blur-md transition-all z-30">
+      Skip Intro <span class="text-slate-500 ml-1">[Esc]</span>
+    </button>
+  </div>
+
+  <!-- Background Ambient Lights -->
+  <div class="hero-ambient-glow"></div>
+  <div class="fixed top-1/2 -left-64 w-96 h-96 bg-purple-600/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 -right-64 w-96 h-96 bg-sky-600/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- ======================================================== -->
+  <!-- NAVIGATION BAR                                           -->
+  <!-- ======================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 border-b border-transparent" id="navbar">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#hero" class="text-2xl font-bold font-heading tracking-tight text-white flex items-center gap-1 group">
+        <span>Noor</span><span class="text-sky-400 group-hover:text-purple-400 transition-colors">.</span>
+      </a>
+
+      <!-- Desktop Nav Items -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="nav-link text-slate-400 hover:text-white transition-colors">About</a>
+        <a href="#experience" class="nav-link text-slate-400 hover:text-white transition-colors">Experience & Education</a>
+        <a href="#skills" class="nav-link text-slate-400 hover:text-white transition-colors">Skills</a>
+        <a href="#services" class="nav-link text-slate-400 hover:text-white transition-colors">Services</a>
+        <a href="#projects" class="nav-link text-slate-400 hover:text-white transition-colors">Projects</a>
+        <a href="#certifications" class="nav-link text-slate-400 hover:text-white transition-colors">Certifications</a>
+        <a href="#contact" class="nav-link text-slate-400 hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-white/10 hover:bg-white text-white hover:text-black border border-white/15 transition-all shadow-sm">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileToggle" class="lg:hidden p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#0A0D14]/95 backdrop-blur-2xl border-b border-white/10 px-6 py-6 transition-all">
+      <nav class="flex flex-col gap-4 text-base font-medium">
+        <a href="#about" class="mobile-nav-link text-slate-300 hover:text-white py-1">About</a>
+        <a href="#experience" class="mobile-nav-link text-slate-300 hover:text-white py-1">Experience & Education</a>
+        <a href="#skills" class="mobile-nav-link text-slate-300 hover:text-white py-1">Skills</a>
+        <a href="#services" class="mobile-nav-link text-slate-300 hover:text-white py-1">Services</a>
+        <a href="#projects" class="mobile-nav-link text-slate-300 hover:text-white py-1">Projects</a>
+        <a href="#certifications" class="mobile-nav-link text-slate-300 hover:text-white py-1">Certifications</a>
+        <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-white py-1">Contact</a>
+      </nav>
+      <div class="mt-6 pt-4 border-t border-white/10 flex flex-col gap-3">
+        <button class="open-cv-btn w-full py-3 rounded-xl bg-sky-500/20 text-sky-300 border border-sky-500/30 font-semibold text-center text-sm">
+          <i class="fas fa-file-invoice mr-2"></i> View & Download CV
+        </button>
+        <a href="#contact" class="mobile-nav-link w-full py-3 rounded-xl bg-white text-black font-semibold text-center text-sm">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-28">
+
+    <!-- ======================================================== -->
+    <!-- HERO SECTION                                             -->
+    <!-- ======================================================== -->
+    <section id="hero" class="min-h-[85vh] flex items-center justify-center px-6 sm:px-8 py-12">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content Column -->
+        <div class="lg:col-span-7 flex flex-col items-start" data-reveal>
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-slate-300 mb-6 backdrop-blur-md">
+            <span class="status-dot"></span>
+            <span>Available for Data Analysis & AI Opportunities</span>
+          </div>
+
+          <!-- Main Hero Heading -->
+          <h1 class="text-4xl sm:text-6xl xl:text-7xl font-extrabold font-heading tracking-tight text-white leading-[1.1] mb-4">
+            Hello, I'm <br />
+            <span class="text-gradient">Noor Karam</span><br />
+            <span class="text-gradient-accent">El-agamy.</span>
+          </h1>
+
+          <!-- Role Subtitle -->
+          <h2 class="text-lg sm:text-xl md:text-2xl font-semibold text-sky-300/90 font-heading mb-6 tracking-wide">
+            Data Analyst &bull; AI Specialist &bull; Finance
+          </h2>
+
+          <!-- Descriptive Paragraph -->
+          <p class="text-base sm:text-lg text-slate-400 font-light max-w-2xl leading-relaxed mb-8">
+            Specializing in international business and finance, bridging analytical methodologies, relational databases, and artificial intelligence to extract actionable business stories from complex datasets.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <!-- CV Modal Trigger -->
+            <button class="open-cv-btn inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full bg-white hover:bg-slate-200 text-black font-semibold text-sm transition-all shadow-lg hover:shadow-white/10 group">
+              <i class="fas fa-file-invoice text-black/80 group-hover:scale-110 transition-transform"></i>
+              <span>View & Download CV</span>
+            </button>
+
+            <!-- Get In Touch Button -->
+            <a href="#contact" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/15 text-white border border-white/10 hover:border-white/25 font-semibold text-sm transition-all backdrop-blur-md">
+              <i class="fas fa-paper-plane text-xs text-sky-400"></i>
+              <span>Get in Touch</span>
+            </a>
+          </div>
+
+          <!-- Quick Social Links Bar -->
+          <div class="flex items-center gap-5 mt-10 text-slate-400 text-lg">
+            <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors" title="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:norhankaram362@gmail.com" class="hover:text-rose-400 transition-colors" title="Email Direct">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/201020098723" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors" title="WhatsApp Chat">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual Column (Portrait) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end" data-reveal>
+          <div class="relative w-72 sm:w-84 md:w-96 aspect-square group">
+            <!-- Subtle Outer Ambient Glow Ring -->
+            <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-sky-500/20 via-indigo-500/10 to-purple-500/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-700"></div>
+
+            <!-- Image Frame -->
+            <div class="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-[#0F121C] shadow-2xl">
+              <img src="assets/images/profile.jpg" alt="Noor Karam El-agamy" class="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700" />
+              <!-- Bottom gradient shade for seamless overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#08090D] via-transparent to-transparent opacity-40"></div>
+            </div>
+
+            <!-- Floating Badge: Finance & Analytics -->
+            <div class="absolute -bottom-4 -left-4 glass-panel px-4 py-2.5 rounded-2xl flex items-center gap-3 border border-white/10 shadow-xl">
+              <div class="w-8 h-8 rounded-xl bg-sky-500/20 flex items-center justify-center text-sky-400 text-sm">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <div>
+                <p class="text-xs text-slate-400 font-mono">Focus</p>
+                <p class="text-xs font-semibold text-white">Finance &amp; Data AI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity">
+        <span class="text-[11px] font-mono tracking-widest uppercase text-slate-400">Scroll to explore</span>
+        <div class="w-5 h-9 rounded-full border border-slate-600 flex items-start justify-center p-1">
+          <div class="w-1.5 h-2 rounded-full bg-slate-400 animate-bounce mt-1"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- ABOUT ME SECTION                                         -->
+    <!-- ======================================================== -->
+    <section id="about" class="py-24 px-6 sm:px-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Narrative Left Column -->
+          <div class="lg:col-span-7" data-reveal>
+            <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">About Me</p>
+            <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight leading-tight mb-6">
+              Transforming Financial Insight into <br />
+              <span class="text-gradient-accent">Data-Driven Intelligence.</span>
+            </h2>
+            <div class="space-y-4 text-slate-300 font-light text-base sm:text-lg leading-relaxed">
+              <p>
+                I am an International Business and Finance professional with a dedicated specialization in <strong class="text-white font-medium">Finance</strong>, actively bridging financial business logic with the technical world of <strong class="text-white font-medium">Data Analytics</strong> and <strong class="text-white font-medium">Artificial Intelligence</strong>.
+              </p>
+              <p>
+                Through hands-on development in the <strong class="text-white font-medium">Digital Egypt Pioneers Initiative (DEPI)</strong>, I engineer robust SQL relational architectures, automated data pipelines using Python, and multi-utility business analytical solutions. My philosophy is grounded in creating clean, organized, and reliable data assets that empower organizations to make confident decisions.
+              </p>
+            </div>
+
+            <!-- Pillars Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+              <div class="glass-panel p-5 rounded-2xl">
+                <div class="text-sky-400 text-xl mb-3"><i class="fas fa-coins"></i></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Financial Acumen</h3>
+                <p class="text-xs text-slate-400 leading-normal">Deep foundation in financial metrics, business operations, and budgeting.</p>
+              </div>
+              <div class="glass-panel p-5 rounded-2xl">
+                <div class="text-purple-400 text-xl mb-3"><i class="fas fa-database"></i></div>
+                <h3 class="text-sm font-semibold text-white mb-1">Relational Architecture</h3>
+                <p class="text-xs text-slate-400 leading-normal">Normalized schema design, constraints, and ETL workflows with PostgreSQL.</p>
+              </div>
+              <div class="glass-panel p-5 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3"><i class="fas fa-robot"></i></div>
+                <h3 class="text-sm font-semibold text-white mb-1">AI &amp; Analytics</h3>
+                <p class="text-xs text-slate-400 leading-normal">Continuous learner expanding technical horizons in machine intelligence.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Right Column (Strict Real Numbers Only!) -->
+          <div class="lg:col-span-5 flex flex-col gap-6" data-reveal>
+            <!-- Stat Card 1 -->
+            <div class="glass-panel p-8 rounded-3xl border border-white/10 relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 text-7xl text-white/5 font-extrabold select-none font-heading group-hover:text-sky-500/10 transition-colors">4</div>
+              <div class="relative z-10">
+                <span class="text-xs font-mono uppercase tracking-widest text-sky-400 block mb-2">Verified Milestone</span>
+                <div class="text-5xl sm:text-6xl font-extrabold text-white font-heading tracking-tight mb-2">
+                  4 <span class="text-sky-400 text-4xl font-normal">Projects</span>
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                  Real end-to-end technical implementations across relational schemas, data pipelines, energy cost analysis, and enterprise data warehousing.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stat Card 2 (Flexible with Tools) -->
+            <div class="glass-panel p-8 rounded-3xl border border-white/10 relative overflow-hidden group">
+              <div class="absolute -right-6 -bottom-6 text-7xl text-white/5 font-extrabold select-none font-heading group-hover:text-purple-500/10 transition-colors">∞</div>
+              <div class="relative z-10">
+                <span class="text-xs font-mono uppercase tracking-widest text-purple-400 block mb-2">Agile Mindset</span>
+                <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight mb-2">
+                  Flexible with Tools
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                  I don't restrict myself to static tool counts. I adapt, master, and deploy whichever tool or framework the project demands.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- EXPERIENCE & EDUCATION (INDEPENDENT TIMELINE)            -->
+    <!-- ======================================================== -->
+    <section id="experience" class="py-24 px-6 sm:px-8 bg-[#0B0D14]/50 border-t border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Timeline</p>
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+            Experience &amp; Education
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4 font-light">
+            My academic foundation in Finance and practical development milestones.
+          </p>
+        </div>
+
+        <!-- Vertical Timeline Tree -->
+        <div class="relative border-l-2 border-white/10 ml-4 sm:ml-32 space-y-12">
+          
+          <!-- Timeline Item 1: DEPI -->
+          <div class="relative pl-8 sm:pl-12 group" data-reveal>
+            <!-- Timeline Node Dot -->
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-[#08090D] shadow-[0_0_12px_#38BDF8] group-hover:scale-125 transition-transform"></div>
+            
+            <!-- Date Tag (Left on larger screens) -->
+            <div class="sm:absolute sm:-left-36 sm:top-1 sm:text-right mb-2 sm:mb-0">
+              <span class="text-xs font-mono text-sky-400 font-semibold tracking-wider">Jul 2026 – Present</span>
+            </div>
+
+            <!-- Card Body -->
+            <div class="glass-panel p-6 sm:p-7 rounded-2xl">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-white font-heading">
+                  Professional Data Analyst Track
+                </h3>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-300 border border-sky-500/20">Cohort YAT773A</span>
+              </div>
+              <p class="text-sm font-medium text-slate-300 mb-3">
+                Digital Egypt Pioneers Initiative (DEPI)
+              </p>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+                Intensive professional training focusing on advanced data analysis methodologies, Python programming, relational database engineering, and end-to-end analytical pipelines.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Ministry of Youth & Sports (YLY) -->
+          <div class="relative pl-8 sm:pl-12 group" data-reveal>
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-[#08090D] shadow-[0_0_12px_#818CF8] group-hover:scale-125 transition-transform"></div>
+            
+            <div class="sm:absolute sm:-left-36 sm:top-1 sm:text-right mb-2 sm:mb-0">
+              <span class="text-xs font-mono text-purple-400 font-semibold tracking-wider">Aug 2026 – Present</span>
+            </div>
+
+            <div class="glass-panel p-6 sm:p-7 rounded-2xl">
+              <h3 class="text-lg font-bold text-white font-heading mb-1">
+                Organizing (OR) Team Member
+              </h3>
+              <p class="text-sm font-medium text-slate-300 mb-3">
+                Ministry of Youth and Sports — Youth Leads Youth (YLY)
+              </p>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+                Collaborate actively in organizing community and youth events, orchestrating operational logistics, and ensuring seamless event workflows.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Egyptian Red Crescent -->
+          <div class="relative pl-8 sm:pl-12 group" data-reveal>
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-rose-500 border-4 border-[#08090D] shadow-[0_0_12px_#F43F5E] group-hover:scale-125 transition-transform"></div>
+            
+            <div class="sm:absolute sm:-left-36 sm:top-1 sm:text-right mb-2 sm:mb-0">
+              <span class="text-xs font-mono text-rose-400 font-semibold tracking-wider">Nov 2025 – Present</span>
+            </div>
+
+            <div class="glass-panel p-6 sm:p-7 rounded-2xl">
+              <h3 class="text-lg font-bold text-white font-heading mb-1">
+                Logistics and Administrative Member
+              </h3>
+              <p class="text-sm font-medium text-slate-300 mb-3">
+                Egyptian Red Crescent
+              </p>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+                Support field logistics and administrative coordination for humanitarian delivery. Certified active First Aid responder equipped for emergency relief scenarios.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4: Bachelor's Degree -->
+          <div class="relative pl-8 sm:pl-12 group" data-reveal>
+            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-[#08090D] shadow-[0_0_12px_#10B981] group-hover:scale-125 transition-transform"></div>
+            
+            <div class="sm:absolute sm:-left-36 sm:top-1 sm:text-right mb-2 sm:mb-0">
+              <span class="text-xs font-mono text-emerald-400 font-semibold tracking-wider">Expected 2027</span>
+            </div>
+
+            <div class="glass-panel p-6 sm:p-7 rounded-2xl">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-lg font-bold text-white font-heading">
+                  Bachelor of Commerce in International Business
+                </h3>
+                <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">Grade: Very Good</span>
+              </div>
+              <p class="text-sm font-medium text-slate-300 mb-3">
+                Higher Institute of Computers, Information and Management Technology – Tanta
+              </p>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+                Academic Specialization in <strong class="text-white font-medium">Finance</strong>. Rigorous coursework in financial markets, managerial accounting, international economics, and data-driven corporate decision-making.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- TOOLS & SKILLS SECTION                                   -->
+    <!-- ======================================================== -->
+    <section id="skills" class="py-24 px-6 sm:px-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Capabilities</p>
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+            Tools &amp; Toolkit
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4 font-light">
+            Core technologies and analytical instruments I leverage to architect data solutions.
+          </p>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Category 1: Programming & Data -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between" data-reveal>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-lg mb-4">
+                <i class="fab fa-python"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 font-heading">Data &amp; Programming</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Core languages used for automated data cleaning, scripting, and pipeline processing.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Python</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">SQL</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Pandas</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">NumPy</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Databases & Warehousing -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between" data-reveal>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-lg mb-4">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 font-heading">Databases &amp; Architecture</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Designing normalized relational stores, dimension tables, and star schemas.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">PostgreSQL</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Star Schema</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">CTEs &amp; Views</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">pgAdmin</span>
+            </div>
+          </div>
+
+          <!-- Category 3: BI & Reporting -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between" data-reveal>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-lg mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 font-heading">BI &amp; Visualization</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Visual analytics and executive reporting platforms to communicate data trends.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Power BI</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Microsoft Excel</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Data Storytelling</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Dashboards</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Finance & Strategy -->
+          <div class="glass-panel p-6 rounded-2xl flex flex-col justify-between" data-reveal>
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg mb-4">
+                <i class="fas fa-hand-holding-dollar"></i>
+              </div>
+              <h3 class="text-base font-bold text-white mb-2 font-heading">Finance &amp; Strategy</h3>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">Financial metrics and domain knowledge driving strategic analytical decision making.</p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-white/5">
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Financial Analysis</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Cost Metrics</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">International Biz</span>
+              <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">Project Mgmt</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- SERVICES SECTION                                         -->
+    <!-- ======================================================== -->
+    <section id="services" class="py-24 px-6 sm:px-8 bg-[#0B0D14]/40 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Offerings</p>
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+            Services
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4 font-light">
+            High-standard analytical services designed for businesses seeking precision and clarity.
+          </p>
+        </div>
+
+        <!-- Services Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Service 1 -->
+          <div class="glass-panel p-7 rounded-2xl relative group" data-reveal>
+            <span class="text-xs font-mono text-slate-500 font-bold mb-4 block">01</span>
+            <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fas fa-sitemap"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Relational Database Design</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+              Crafting robust schema architectures in PostgreSQL with strict foreign keys, integrity constraints, and transactional performance.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="glass-panel p-7 rounded-2xl relative group" data-reveal>
+            <span class="text-xs font-mono text-slate-500 font-bold mb-4 block">02</span>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Data Ingestion &amp; Cleaning</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+              Automating Python and SQL ETL pipelines to ingest unstructured spreadsheets and transform messy data into clean, ready-to-query assets.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="glass-panel p-7 rounded-2xl relative group" data-reveal>
+            <span class="text-xs font-mono text-slate-500 font-bold mb-4 block">03</span>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fas fa-chart-column"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">BI Dashboards &amp; KPIs</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+              Building interactive Power BI dashboards that track revenue trends, customer segments, and organizational operational metrics.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="glass-panel p-7 rounded-2xl relative group" data-reveal>
+            <span class="text-xs font-mono text-slate-500 font-bold mb-4 block">04</span>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl mb-5 group-hover:scale-110 transition-transform">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Financial &amp; Cost Analysis</h3>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed font-light">
+              Combining financial models with SQL querying to evaluate profitability, multi-utility rate impacts, and operational efficiency.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- PROJECTS SECTION                                         -->
+    <!-- ======================================================== -->
+    <section id="projects" class="py-24 px-6 sm:px-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Portfolio</p>
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+            Projects
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4 font-light">
+            Real-world technical projects demonstrating database modeling, Python scripting, and analytical querying.
+          </p>
+        </div>
+
+        <!-- Projects Grid (4 Real Projects) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Project 1: University Database -->
+          <div class="glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group" data-reveal>
+            <div>
+              <!-- Visual Container -->
+              <div class="relative aspect-video overflow-hidden bg-[#0A0C14] border-b border-white/5">
+                <img src="assets/images/project1-university.png" alt="University Database System Screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0F121C] via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-4 left-4 text-[11px] font-mono uppercase px-3 py-1 rounded-full bg-black/60 text-sky-300 border border-sky-400/20 backdrop-blur-md">
+                  Database Architecture
+                </span>
+              </div>
+
+              <!-- Content Area -->
+              <div class="p-7">
+                <h3 class="text-xl font-bold text-white font-heading mb-2">
+                  University Database System
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+                  Engineered a relational database schema in PostgreSQL managing university operations (students, majors, courses, professors, and enrollments). Implemented foreign key constraints, data integrity checks, and transactional updates with rollback validation.
+                </p>
+
+                <!-- Tech Badges -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">SQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">PostgreSQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Relational Schema</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">pgAdmin</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons Footer -->
+            <div class="p-7 pt-0 border-t border-white/5 mt-auto flex items-center gap-3">
+              <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-linkedin-in text-sky-400"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Employees Analysis -->
+          <div class="glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group" data-reveal>
+            <div>
+              <div class="relative aspect-video overflow-hidden bg-[#0A0C14] border-b border-white/5">
+                <img src="assets/images/project2-employees.png" alt="Employees Data Analysis Preview" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0F121C] via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-4 left-4 text-[11px] font-mono uppercase px-3 py-1 rounded-full bg-black/60 text-purple-300 border border-purple-400/20 backdrop-blur-md">
+                  Data Pipeline &amp; Ingestion
+                </span>
+              </div>
+
+              <div class="p-7">
+                <h3 class="text-xl font-bold text-white font-heading mb-2">
+                  Employees Data Analysis
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+                  Developed a data pipeline ingesting multi-department workforce records from Excel into PostgreSQL using Python. Executed analytical SQL queries evaluating demographic patterns, department salary distributions, and criteria-based workforce filters.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Python</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">SQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">PostgreSQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Excel ETL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-7 pt-0 border-t border-white/5 mt-auto flex items-center gap-3">
+              <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-linkedin-in text-sky-400"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Energy Consumption Analysis -->
+          <div class="glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group" data-reveal>
+            <div>
+              <div class="relative aspect-video overflow-hidden bg-[#0A0C14] border-b border-white/5">
+                <img src="assets/images/project3-energy.png" alt="Energy Consumption Analysis Preview" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0F121C] via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-4 left-4 text-[11px] font-mono uppercase px-3 py-1 rounded-full bg-black/60 text-emerald-300 border border-emerald-400/20 backdrop-blur-md">
+                  Utility Analytics &amp; CTEs
+                </span>
+              </div>
+
+              <div class="p-7">
+                <h3 class="text-xl font-bold text-white font-heading mb-2">
+                  Energy Consumption Analysis
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+                  Constructed views and unpivoted multi-utility metrics (water, electricity, gas) across buildings and cities using SQL CTEs and UNION operations. Joined dynamic utility rate cards to evaluate total expenditure and identify top energy-consuming facilities.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">PostgreSQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Advanced CTEs</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">SQL Views</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Cost Modeling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-7 pt-0 border-t border-white/5 mt-auto flex items-center gap-3">
+              <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-linkedin-in text-sky-400"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4: Superstore Data Warehouse -->
+          <div class="glass-panel rounded-3xl overflow-hidden flex flex-col justify-between group" data-reveal>
+            <div>
+              <div class="relative aspect-video overflow-hidden bg-[#0A0C14] border-b border-white/5">
+                <img src="assets/images/project4-superstore.png" alt="Superstore Data Warehouse pgAdmin Screenshot" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0F121C] via-transparent to-transparent opacity-60"></div>
+                <span class="absolute top-4 left-4 text-[11px] font-mono uppercase px-3 py-1 rounded-full bg-black/60 text-amber-300 border border-amber-400/20 backdrop-blur-md">
+                  Star Schema &amp; Data Warehouse
+                </span>
+              </div>
+
+              <div class="p-7">
+                <h3 class="text-xl font-bold text-white font-heading mb-2">
+                  Superstore Data Warehouse
+                </h3>
+                <p class="text-sm text-slate-400 leading-relaxed font-light mb-6">
+                  Architected a dimensional Data Warehouse utilizing Star Schema modeling (Fact Sales linked with Dim Customer, Product, Location, and Date). Implemented automated Python cleaning routines, analytical views, and stored procedures for business performance tracking.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-6">
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">PostgreSQL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Star Schema</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Python ETL</span>
+                  <span class="text-xs font-mono px-2.5 py-1 rounded-md bg-white/5 text-slate-300 border border-white/10">Jupyter</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-7 pt-0 border-t border-white/5 mt-auto flex items-center gap-3">
+              <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/15 text-white text-xs font-semibold flex items-center justify-center gap-2 border border-white/10 transition-all">
+                <i class="fab fa-linkedin-in text-sky-400"></i> LinkedIn
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- CERTIFICATIONS SECTION (CV CREDENTIALS ONLY)             -->
+    <!-- ======================================================== -->
+    <section id="certifications" class="py-24 px-6 sm:px-8 bg-[#0B0D14]/40 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16" data-reveal>
+          <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Verified Qualifications</p>
+          <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight">
+            Certifications
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-4 font-light">
+            Verified credentials and programs from world-class industry institutions.
+          </p>
+        </div>
+
+        <!-- Certifications Grid (Real Credentials Only) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Cert 1: Oracle AI -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center text-red-400 text-xl shrink-0">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-red-400 uppercase font-semibold">Oracle</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">Artificial Intelligence Course</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Foundations of artificial intelligence concepts, neural structures, and enterprise applications.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2: IBM Data Analysis -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl shrink-0">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-blue-400 uppercase font-semibold">IBM</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">Data Analysis Training</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Structured analytical workflows, data exploration, and quantitative business interpretations.</p>
+            </div>
+          </div>
+
+          <!-- Cert 3: IBM SkillsBuild Badge -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-cyan-400 uppercase font-semibold">IBM SkillsBuild</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">Data Fundamentals Professional Badge</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Foundational principles of data science, lifecycle governance, and data warehousing.</p>
+            </div>
+          </div>
+
+          <!-- Cert 4: IBM NLP -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl shrink-0">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-purple-400 uppercase font-semibold">IBM SkillsBuild</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">AI and NLP Certificate</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Language processing pipelines, computational linguistics, and text analytics.</p>
+            </div>
+          </div>
+
+          <!-- Cert 5: Columbia University IT PM -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-xl shrink-0">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-sky-400 uppercase font-semibold">Columbia University / Coursera</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">IT Project Management Professional</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Agile coordination, scope architecture, and risk control for complex IT systems.</p>
+            </div>
+          </div>
+
+          <!-- Cert 6: Columbia University Module -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 text-xl shrink-0">
+              <i class="fas fa-cubes"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-amber-400 uppercase font-semibold">Columbia University / Coursera</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">Construction Management Module</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Project planning, cost estimation models, and resource optimization framework.</p>
+            </div>
+          </div>
+
+          <!-- Cert 7: Coursera English & Soft Skills -->
+          <div class="glass-panel p-6 rounded-2xl flex items-start gap-4 md:col-span-2 lg:col-span-1" data-reveal>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl shrink-0">
+              <i class="fas fa-language"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-mono text-emerald-400 uppercase font-semibold">Coursera</span>
+              <h3 class="text-base font-bold text-white font-heading mt-0.5 mb-1">English &amp; Soft Skills Programs</h3>
+              <p class="text-xs text-slate-400 leading-relaxed font-light">Executive communication, technical presentation, and cross-functional team leadership.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- CONTACT SECTION (PROTECTED TELEGRAM INTEGRATION)         -->
+    <!-- ======================================================== -->
+    <section id="contact" class="py-24 px-6 sm:px-8 border-t border-white/5">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Contact Information (Left) -->
+          <div class="lg:col-span-5" data-reveal>
+            <p class="text-xs font-mono font-medium tracking-[0.25em] text-sky-400 uppercase mb-3">Get in Touch</p>
+            <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white tracking-tight leading-tight mb-6">
+              Let's Discuss Your Next <br />
+              <span class="text-gradient-accent">Data Project.</span>
+            </h2>
+            <p class="text-slate-400 font-light text-base leading-relaxed mb-8">
+              Whether you are looking for an analytical mind to architect SQL databases, build Python ETL pipelines, or extract business intelligence from financial numbers, I'd love to connect.
+            </p>
+
+            <!-- Channels List -->
+            <div class="space-y-4">
+              <!-- Email -->
+              <a href="mailto:norhankaram362@gmail.com" class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-sky-500/40 group">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 text-base shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400 uppercase">Email Directly</p>
+                  <p class="text-sm font-semibold text-white">norhankaram362@gmail.com</p>
+                </div>
+              </a>
+
+              <!-- Phone & WhatsApp -->
+              <a href="https://wa.me/201020098723" target="_blank" rel="noopener noreferrer" class="glass-panel p-4 rounded-2xl flex items-center gap-4 hover:border-emerald-500/40 group">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-base shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400 uppercase">Phone &amp; WhatsApp</p>
+                  <p class="text-sm font-semibold text-white">+20 102 009 8723</p>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="glass-panel p-4 rounded-2xl flex items-center gap-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 text-base shrink-0">
+                  <i class="fas fa-location-dot"></i>
+                </div>
+                <div>
+                  <p class="text-xs font-mono text-slate-400 uppercase">Location</p>
+                  <p class="text-sm font-semibold text-white">Qutour, Gharbia, Egypt</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Row -->
+            <div class="flex items-center gap-4 mt-8">
+              <a href="https://github.com/noorelagamy/noor" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-slate-400 hover:text-white hover:border-white/30 transition-all" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/norhankaram" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-400/30 transition-all" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://wa.me/201020098723" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-emerald-400/30 transition-all" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Telegram Contact Form (Right) -->
+          <div class="lg:col-span-7" data-reveal>
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-white/10 relative">
+              <div class="flex items-center justify-between mb-6">
+                <div>
+                  <h3 class="text-xl font-bold font-heading text-white">Direct Message</h3>
+                  <p class="text-xs text-slate-400 font-light mt-0.5">Dispatches instantly to my personal Telegram.</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs font-mono text-sky-400 bg-sky-500/10 px-3 py-1.5 rounded-full border border-sky-500/20">
+                  <i class="fab fa-telegram"></i> Telegram Bot Sync
+                </div>
+              </div>
+
+              <!-- The Form -->
+              <form id="contactForm" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <!-- Name Input -->
+                  <div>
+                    <label for="formName" class="block text-xs font-mono text-slate-300 uppercase mb-2">Your Name *</label>
+                    <input type="text" id="formName" name="name" required placeholder="e.g. Sarah Miller" class="w-full px-4 py-3 rounded-xl bg-[#090B10] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-sky-400 transition-colors" />
+                  </div>
+                  <!-- Email Input -->
+                  <div>
+                    <label for="formEmail" class="block text-xs font-mono text-slate-300 uppercase mb-2">Email Address *</label>
+                    <input type="email" id="formEmail" name="email" required placeholder="sarah@example.com" class="w-full px-4 py-3 rounded-xl bg-[#090B10] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-sky-400 transition-colors" />
+                  </div>
+                </div>
+
+                <!-- Subject -->
+                <div>
+                  <label for="formSubject" class="block text-xs font-mono text-slate-300 uppercase mb-2">Subject</label>
+                  <input type="text" id="formSubject" name="subject" placeholder="Project Inquiry / Job Opportunity" class="w-full px-4 py-3 rounded-xl bg-[#090B10] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-sky-400 transition-colors" />
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label for="formMessage" class="block text-xs font-mono text-slate-300 uppercase mb-2">Message *</label>
+                  <textarea id="formMessage" name="message" rows="5" required placeholder="Describe your data needs, project goals, or questions here..." class="w-full px-4 py-3 rounded-xl bg-[#090B10] border border-white/10 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-sky-400 transition-colors resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-white hover:bg-slate-200 text-black font-semibold text-sm transition-all flex items-center justify-center gap-3 group shadow-lg hover:shadow-white/10">
+                  <span id="submitBtnText">Send Message</span>
+                  <i class="fas fa-paper-plane text-xs text-black/70 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                  <i id="submitBtnSpinner" class="fas fa-circle-notch fa-spin text-sm hidden"></i>
+                </button>
+              </form>
+
+              <!-- Dynamic Feedback Alert -->
+              <div id="formStatus" class="hidden"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- CV MODAL & DOWNLOAD LIGHTBOX                             -->
+  <!-- ======================================================== -->
+  <div id="cvModal">
+    <div class="relative w-full max-w-4xl max-h-[92vh] mx-4 bg-[#0E111A] border border-white/15 rounded-3xl overflow-hidden shadow-2xl flex flex-col">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 bg-[#141824] border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <i class="fas fa-file-invoice text-sky-400 text-lg"></i>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white font-heading">Curriculum Vitae</h3>
+            <p class="text-xs text-slate-400 font-mono">Noor Karam El-agamy — Read-Only Official Document</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <!-- Download Button -->
+          <button id="downloadCvBtn" class="px-4 py-2 rounded-xl bg-white text-black text-xs font-semibold hover:bg-slate-200 transition-all flex items-center gap-2">
+            <i class="fas fa-download text-xs"></i>
+            <span>Download Image (PNG)</span>
+          </button>
+          <!-- Close Button -->
+          <button id="closeCvModal" class="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/15 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+            <i class="fas fa-times text-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Image Viewer Container -->
+      <div class="p-4 sm:p-6 overflow-y-auto flex-1 flex justify-center bg-[#07090E]">
+        <img src="assets/images/cv-preview.png" alt="Noor Karam El-agamy Official Resume" class="max-w-full h-auto rounded-lg shadow-2xl border border-white/10" />
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3 bg-[#0E111A] border-t border-white/5 flex items-center justify-between text-xs text-slate-400 font-mono">
+        <span>Protected High-Resolution Document</span>
+        <span>Press Esc to close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER                                                   -->
+  <!-- ======================================================== -->
+  <footer class="py-12 px-6 sm:px-8 border-t border-white/5 bg-[#06070A] text-slate-400 text-xs font-light">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-2">
+        <span class="text-lg font-bold font-heading text-white">Noor<span class="text-sky-400">.</span></span>
+        <span class="text-slate-600">|</span>
+        <span>&copy; 2026 Noor Karam El-agamy. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
